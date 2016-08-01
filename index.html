@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Hästens Showcase</title>
+		<meta name="description" content="Hästens Showcase">
+		<meta name="author" content="Alexander">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+
+		$(document).ready(function(){
+			var activeTab = "auroria";
+
+			$('#myTabs a').click(function (e) {
+				activeTab = $(this).attr("aria-controls");
+				//activeTab = this.a.attr("aria-controls");
+				$(this).tab('show')
+			})
+
+			$(".thumbContainer div").click(function (e){
+				changePic(this.id)
+			})
+
+			function changePic(id){
+				var pre = "img/"+activeTab+"/", pos= "-md.png";
+				var elt = "#"+activeTab+"BigPic";
+				console.log(elt)
+				$(elt).attr("src", pre+id+pos);
+			}
+
+		});
+		</script>
+	</head>
+
+	<body>
+		<div class="row header">
+			<div class="container">
+				<h1>Hästens Sängar</h1>
+			</div>
+		</div>
+		<div class="row navbar">
+			<div class="container">
+				<ul class="nav nav-tabs" id="myTabs" role="tablist">
+					<li role="presentation" class="active"><a href="#auroria" aria-controls="auroria" role="tab" data-toggle="tab">Auroria</a></li>
+					<li role="presentation"><a href="#classic" aria-controls="classic" role="tab" data-toggle="tab">Classic</a></li>
+					<li role="presentation"><a href="#luxuria" aria-controls="luxuria" role="tab" data-toggle="tab">Luxuria</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="auroria">
+						
+						<div class="row">
+							<div class="col-xs-12 img-responsive bigPicCont">
+								<img src="img/auroria/0-md.png" class="bigPic" id="auroriaBigPic">
+							</div>
+						</div>
+
+						<div class="row thumbContainer">
+							<div class="col-xs-2 thmb" id=0>
+								<img src="img/auroria/0-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id="1">
+								<img src="img/auroria/1-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id="2">
+								<img src="img/auroria/2-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=3>
+								<img src="img/auroria/3-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=4>
+								<img src="img/auroria/4-min.png" class="img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=5>
+								<img src="img/auroria/5-min.png" class=" img-thumbnail">
+							</div>
+						</div>
+
+
+					</div>
+					<div role="tabpanel" class="tab-pane" id="classic">
+						<div class="row ">
+							<div class="col-xs-12 img-responsive bigPicCont">
+								<img src="img/classic/0-md.png" class="bigPic" id="classicBigPic">
+							</div>
+						</div>
+
+						<div class="row thumbContainer">
+							<div class="col-xs-2 thmb" id="0">
+								<img src="img/classic/0-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id="1">
+								<img src="img/classic/1-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id="2">
+								<img src="img/classic/2-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=3>
+								<img src="img/classic/3-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=4>
+								<img src="img/classic/4-min.png" class="img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=5>
+								<img src="img/classic/5-min.png" class=" img-thumbnail">
+							</div>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="luxuria">
+						<div class="row ">
+							<div class="col-xs-12 bigPicCont">
+								<img src="img/luxuria/0-md.png" class="bigPic img-responsive" id="luxuriaBigPic">
+							</div>
+						</div>
+
+						<div class="row thumbContainer">
+							<div class="col-xs-2 thmb" id="0">
+								<img src="img/luxuria/0-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id="1">
+								<img src="img/luxuria/1-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id="2">
+								<img src="img/luxuria/2-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=3>
+								<img src="img/luxuria/3-min.png" class=" img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=4>
+								<img src="img/luxuria/4-min.png" class="img-thumbnail">
+							</div>
+							<div class="col-xs-2 thmb" id=5>
+								<img src="img/luxuria/5-min.png" class=" img-thumbnail">
+							</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+</html>

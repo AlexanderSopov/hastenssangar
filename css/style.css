@@ -1,0 +1,30 @@
+
+
+body{
+	color:white;
+	background-color: black;
+}
+.thmb{
+	cursor:pointer;
+}
+
+.header{
+	margin:0px;
+}
+.navbar{
+}
+
+.bigPic{
+	position:relative;
+	top:-50px;
+	width:100%;
+}
+
+.bigPicCont{
+	height:650px;
+	overflow:hidden;
+}
+
+.thumbContainer{
+	margin-top:50px;
+}
