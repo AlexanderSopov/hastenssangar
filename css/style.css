@@ -4,9 +4,6 @@ body{
 	color:white;
 	background-color: black;
 }
-.thmb{
-	cursor:pointer;
-}
 
 .header{
 	margin:0px;
@@ -28,4 +25,15 @@ body{
 .thumbContainer{
 	margin-top:50px;
 	margin-bottom:50px;
+}
+
+.thumbContainer button{
+	background-color: black;
+	border:0px;
+}
+.thumbContainer button:focus {
+	outline:0;
+}
+.thumbContainer button:focus img{
+	border:5px solid black;
 }

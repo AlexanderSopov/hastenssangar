@@ -15,30 +15,7 @@
 		<![endif]-->
 		<script src="js/jquery-3.1.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script>
-
-		$(document).ready(function(){
-			var activeTab = "auroria";
-
-			$('#myTabs a').click(function (e) {
-				activeTab = $(this).attr("aria-controls");
-				//activeTab = this.a.attr("aria-controls");
-				$(this).tab('show')
-			})
-
-			$(".thumbContainer div").click(function (e){
-				changePic(this.id)
-			})
-
-			function changePic(id){
-				var pre = "img/"+activeTab+"/", pos= "-md.png";
-				var elt = "#"+activeTab+"BigPic";
-				console.log(elt)
-				$(elt).attr("src", pre+id+pos);
-			}
-
-		});
-		</script>
+		<script src="js/script.js"></script>
 	</head>
 
 	<body>
@@ -61,7 +38,7 @@
 			<div class="row">
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane active" id="auroria">
+					<div role="tabpanel" class="tab-pane fade active" id="auroria">
 						
 						<div class="row">
 							<div class="col-xs-12 img-responsive bigPicCont">
@@ -70,29 +47,29 @@
 						</div>
 
 						<div class="row thumbContainer">
-							<div class="col-xs-2 thmb" id=0>
+							<button class="col-xs-2 thmb " id=0>
 								<img src="img/auroria/0-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id="1">
+							</button>
+							<button class="col-xs-2 thmb" id="1">
 								<img src="img/auroria/1-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id="2">
+							</button>
+							<button class="col-xs-2 thmb" id="2">
 								<img src="img/auroria/2-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=3>
+							</button>
+							<button class="col-xs-2 thmb" id=3>
 								<img src="img/auroria/3-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=4>
+							</button>
+							<button class="col-xs-2 thmb" id=4>
 								<img src="img/auroria/4-min.png" class="img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=5>
+							</button>
+							<button class="col-xs-2 thmb" id=5>
 								<img src="img/auroria/5-min.png" class=" img-thumbnail">
-							</div>
+							</button>
 						</div>
 
 
 					</div>
-					<div role="tabpanel" class="tab-pane" id="classic">
+					<div role="tabpanel" class="tab-pane fade" id="classic">
 						<div class="row ">
 							<div class="col-xs-12 img-responsive bigPicCont">
 								<img src="img/classic/0-md.png" class="bigPic" id="classicBigPic">
@@ -100,27 +77,27 @@
 						</div>
 
 						<div class="row thumbContainer">
-							<div class="col-xs-2 thmb" id="0">
+							<button class="col-xs-2 thmb" id="0">
 								<img src="img/classic/0-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id="1">
+							</button>
+							<button class="col-xs-2 thmb" id="1">
 								<img src="img/classic/1-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id="2">
+							</button>
+							<button class="col-xs-2 thmb" id="2">
 								<img src="img/classic/2-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=3>
+							</button>
+							<button class="col-xs-2 thmb" id=3>
 								<img src="img/classic/3-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=4>
+							</button>
+							<button class="col-xs-2 thmb" id=4>
 								<img src="img/classic/4-min.png" class="img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=5>
+							</button>
+							<button class="col-xs-2 thmb" id=5>
 								<img src="img/classic/5-min.png" class=" img-thumbnail">
-							</div>
+							</button>
 						</div>
 					</div>
-					<div role="tabpanel" class="tab-pane" id="luxuria">
+					<div role="tabpanel" class="tab-pane fade" id="luxuria">
 						<div class="row ">
 							<div class="col-xs-12 bigPicCont">
 								<img src="img/luxuria/0-md.png" class="bigPic img-responsive" id="luxuriaBigPic">
@@ -128,24 +105,24 @@
 						</div>
 
 						<div class="row thumbContainer">
-							<div class="col-xs-2 thmb" id="0">
+							<button class="col-xs-2" id="0">
 								<img src="img/luxuria/0-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id="1">
+							</button>
+							<button class="col-xs-2 thmb" id="1">
 								<img src="img/luxuria/1-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id="2">
+							</button>
+							<button class="col-xs-2 thmb" id="2">
 								<img src="img/luxuria/2-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=3>
+							</button>
+							<button class="col-xs-2 thmb" id=3>
 								<img src="img/luxuria/3-min.png" class=" img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=4>
+							</button>
+							<button class="col-xs-2 thmb" id=4>
 								<img src="img/luxuria/4-min.png" class="img-thumbnail">
-							</div>
-							<div class="col-xs-2 thmb" id=5>
+							</button>
+							<button class="col-xs-2 thmb" id=5>
 								<img src="img/luxuria/5-min.png" class=" img-thumbnail">
-							</div>
+							</button>
 					</div>
 				</div>
 
