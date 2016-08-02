@@ -13,10 +13,16 @@ $(document).ready(function(){
 	});
 
 	$(".thumbContainer button").click(function (e){
-		var pre = "img/"+activeTab+"/", pos= "-md.png";
-		var elt = "#"+activeTab+"BigPic";
-		console.log(elt)
-		$(elt).attr("src", pre+this.id+pos);
+		var animationTime = 300,
+		pre = "img/"+activeTab+"/", pos= "-md.png",
+		elt = "#"+activeTab+"BigPic",
+		path = pre+this.id+pos;
+
+		$(elt).fadeOut(animationTime);
+		setTimeout(function(){
+			$(elt).attr("src", path);
+			$(elt).fadeIn(animationTime);	
+		},animationTime);
 	})
 
 });
