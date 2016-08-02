@@ -22,18 +22,22 @@ body{
 	overflow:hidden;
 }
 
-.thumbContainer{
-	margin-top:50px;
+.colorThumbs{
+	margin-top:30px;
 	margin-bottom:50px;
 }
 
-.thumbContainer button{
+.colorThumbs button{
 	background-color: black;
 	border:0px;
 }
-.thumbContainer button:focus {
+.colorThumbs button:focus {
 	outline:0;
 }
-.thumbContainer button:focus img{
+.colorThumbs button:focus img{
 	border:5px solid black;
+}
+
+li a{
+	color:white;
 }

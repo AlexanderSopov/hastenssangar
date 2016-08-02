@@ -8,15 +8,16 @@ $(document).ready(function(){
 		$('#myTabs a:first').tab("show");
 	},150);
 
+	// Change between the different models of beds in the tab-menu
 	$('#myTabs a').click(function (e) {
 		activeTab = $(this).attr("aria-controls");
 	});
 
-	$(".thumbContainer button").click(function (e){
-		var animationTime = 300,
-		pre = "img/"+activeTab+"/", pos= "-md.png",
-		elt = "#"+activeTab+"BigPic",
-		path = pre+this.id+pos;
+	// Change the different colors in 
+	$(".colorThumbs button").click(function (e){
+		var animationTime = 240,
+		path = "img/"+ activeTab +"/" + this.id + "-md.png",
+		elt = "#"+activeTab+"BigPic";
 
 		$(elt).fadeOut(animationTime);
 		setTimeout(function(){
